@@ -33,14 +33,6 @@
       min-width: 640px; 
       width: 640px;
     }
-    /* For smaller mobile screens*/
-    @media only screen and (max-device-width:640px), only screen and (max-width:640px) {
-      .em-table {
-        width: 100% !important;
-        max-width: 640px !important;
-        min-width: 320px !important;
-      }
-    }
 
     header {
       padding: 0.5rem 1rem;
@@ -49,7 +41,7 @@
     .header-text {
       font-family: "Tourney", Arial, Helvetica, sans-serif;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.8rem;
     }
 
     .img {
@@ -59,6 +51,7 @@
 
     .heading {
       font-family: "Oxanium", Arial, Helvetica, sans-serif;
+      font-size: 1.1rem
     }
 
     .content-section {
@@ -68,13 +61,37 @@
     .button {
       display: inline-block;
       padding: 0.5rem 1rem;
-      background-color: #FF218C;
-      color: #fff;
       text-decoration: none;
       border-radius: 0.5rem;
+    }
 
+    /* Button class names based on the colour of the background of the element they are on */
+    .button-magenta {
+      background-color: #21B1FF;
+      color: #fff;
+      
+      &:hover, &:active {
+        background-color: #FFD800;
+        color: #FF218C;
+      }
+    }
+
+    .button-yellow {
+      background-color: #FF218C;
+      color: #fff;
+      
       &:hover, &:active {
         background-color: #21B1FF;
+      }
+    }
+
+    .button-cyan {
+      background-color: #FFD800;
+      color: #FF218C;
+      
+      &:hover, &:active {
+        background-color: #FF218C;
+        color: #fff;
       }
     }
 
@@ -89,6 +106,19 @@
         }
       }
     }
+
+   /* For smaller mobile screens*/
+  @media only screen and (max-device-width:640px), only screen and (max-width:640px) {
+    .em-table {
+      width: 100% !important;
+      max-width: 640px !important;
+      min-width: 320px !important;
+    }
+
+    .header-text {
+      font-size: 1.3rem;
+    }
+  }
 
   </style>
 </head>
@@ -121,20 +151,27 @@
                 </tr>
                 <tr>
                   <td>
-                    <h2 style="text-align: center; font-size: 1.1rem;" class="heading">Our Services</h2>
+                    <h2 style="text-align: center; font-size: 1.5rem;" class="heading">Our Services</h2>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <table cellpadding="0" width="100%" border="0" class="content-section">
+                    <table cellpadding="0" cellspacing="10" width="100%" border="0" class="content-section">
                       <tr>
                         <td>
-                          <h3 style="text-align: left; font-size: 1rem;" class="heading">Website Development</h3>
+                          <h3 style="text-align: left;" class="heading">Website Development</h3>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique sint adipisci et dignissimos explicabo beatae soluta obcaecati voluptas, rem praesentium cumque nisi voluptatem quia id aliquid voluptates vitae animi ad.</p>
+                          <p>From landing pages to large websites, we have you covered. We can make small event pages, to big multi-page sites to showcase your business and products. Static sites, dynamic sites, all services are available.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center;">
+                          <a href="/index.html" target="_blank" class="button button-magenta">
+                            Website Development Services
+                          </a>
                         </td>
                       </tr>
                     </table>
@@ -142,15 +179,22 @@
                 </tr>
                 <tr>
                   <td>
-                    <table cellpadding="0" width="100%" border="0" style="background-color: #FFD800;" class="content-section">
+                    <table cellpadding="0" cellspacing="10" width="100%" border="0" style="background-color: #FFD800;" class="content-section">
                       <tr>
                         <td>
-                          <h3 style="text-align: left; font-size: 1rem;" class="heading">Accessibility Services</h3>
+                          <h3 style="text-align: left;" class="heading">Accessibility Services</h3>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique sint adipisci et dignissimos explicabo beatae soluta obcaecati voluptas, rem praesentium cumque nisi voluptatem quia id aliquid voluptates vitae animi ad.</p>
+                          <p>You have a website, but you are not sure if everyone can use it. Increase usability by having us audit it for potential problems, from colour contrast checking to screen-reader issues, and have us fix any problems.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center;">
+                          <a href="/index.html" target="_blank" class="button button-yellow">
+                            Accessibilty Services
+                          </a>
                         </td>
                       </tr>
                     </table>
@@ -158,15 +202,22 @@
                 </tr>
                 <tr>
                   <td>
-                    <table cellpadding="0" width="100%" border="0" style="background-color: #21B1FF;" class="content-section">
+                    <table cellpadding="0" cellspacing="10" width="100%" border="0" style="background-color: #21B1FF;" class="content-section">
                       <tr>
                         <td>
-                          <h3 style="text-align: left; font-size: 1rem;" class="heading">Website Management</h3>
+                          <h3 style="text-align: left;" class="heading">Website Management</h3>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique sint adipisci et dignissimos explicabo beatae soluta obcaecati voluptas, rem praesentium cumque nisi voluptatem quia id aliquid voluptates vitae animi ad.</p>
+                          <p>Your website needs managing, and you don't have the time. Let us manage your site for you. From minor changes to the look, to changing the content, and even dealing with hosting and domains, we have you covered.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center;">
+                          <a href="/index.html" target="_blank" class="button button-cyan">
+                            Website Management Services
+                          </a>
                         </td>
                       </tr>
                     </table>
@@ -182,7 +233,7 @@
                       </tr>
                       <tr>
                         <td style="text-align: center;">
-                          <a href="/index.html" target="_blank" class="button">
+                          <a href="/index.html" target="_blank" class="button button-yellow">
                             See Our Website
                           </a>
                         </td>
